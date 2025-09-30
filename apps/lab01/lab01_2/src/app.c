@@ -1,11 +1,8 @@
 ﻿#include "app.h"
 
-// Variant 20
-
-// sin^3.2(a-x)
-// -------------
-//   b + x^-1.7
-// a > x, x > 0
+// Variant 26
+// e^(a * |1 - 2*cos(b*x)|)
+// a = 7.23, b = 3.43, x = 5.22
 
 int main()
 {
@@ -23,15 +20,11 @@ int main()
 
 	printf("\n");
 
-	double t1 = sin(a - x);
+    double t = fabs(1 - 2 * cos(b * x));
 
-	double t2 = pow(x, -1.7);
+    double result = exp(a * t);
 
-	double result = pow(t1, 3.2) / (b + t2);
+    printf("e^(a * |1 - 2*cos(b*x)|) = %.6f\n", result);
 
-	printf("sin^3.2(%.3f-%.3f)\n------------------------ = %.3f", a, x, result);
-	
-	printf("\n%.3f + %.3f^-1.7", b, x);
-
-	return 0;
+    return 0;
 }
