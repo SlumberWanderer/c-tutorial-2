@@ -1,10 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#include "app.h"
 
-// Variant 26
-// e^(a * |1 - 2*cos(b*x)|)
-// a = 7.23, b = 3.43, x = 5.22
+/* Variant 1
+   sin(bx)
+   ------ * e^(-ax)
+     x
+   a = 2.1, b = 3.9, x = 0.1
+*/
 
 int main()
 {
