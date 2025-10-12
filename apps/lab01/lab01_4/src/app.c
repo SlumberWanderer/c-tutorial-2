@@ -1,10 +1,10 @@
-include "app.h"
+#include "app.h"
 
-///* Variant 1
-//   sin(bx)
-//   ------ * e^(-ax)
-//     x
-//   a = 2.1, b = 3.9, x = 0.1
+/* Variant 1
+   sin(bx)
+   ------ * e^(-ax)
+    x
+   a = 2.1, b = 3.9, x = 0.1 */
 
 int main()
 {
