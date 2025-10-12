@@ -1,18 +1,23 @@
-﻿#include "app.h"
+include "app.h"
 
-/* Variant 26
- e^(a * |1 - 2*cos(b*x)|)
- a = 7.23, b = 3.43, x = 5.22 */
+///* Variant 1
+//   sin(bx)
+//   ------ * e^(-ax)
+//     x
+//   a = 2.1, b = 3.9, x = 0.1
+//*/
 
 int main()
 {
-    double a = 1.04, b = -7.12, x = 3.15;
+    double a = 2.1, b = 3.9, x = 0.1;
 
-    double t = fabs(1 - 2 * cos(b * x));
+    double t1 = sin(b * x);
+    double t2 = exp(-a * x);
 
-    double result = exp(a * t);
+    double result = (t1 / x) * t2;
 
-    printf("e^(a * |1 - 2*cos(b*x)|) = %.6f\n", result);
+    printf("sin(%.3f * %.3f)\n------------------- * e^-(%.3f * %.3f) = %.3f\n", b, x, a, x, result);
+    printf("%.3f\n", x);
 
     return 0;
 }
