@@ -1,4 +1,4 @@
-﻿project("lab02_1")
+﻿project("lab01_5")
 
 include_directories(include)
 

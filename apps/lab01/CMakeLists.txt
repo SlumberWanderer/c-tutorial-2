@@ -2,3 +2,4 @@
 add_subdirectory("lab01_2")
 add_subdirectory("lab01_3")
 add_subdirectory("lab01_4")
+add_subdirectory("lab01_5")
