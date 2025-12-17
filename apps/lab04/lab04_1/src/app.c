@@ -1,33 +1,18 @@
 #include "app.h"
 
-#define N 10
-
 int main()
 {
-    srand(time(NULL));
+    run_test_case(2.0, 10);
+    run_test_case(3.0, 5);
+    run_test_case(2.0, -3);
 
-    int a[N];
-    int i;
-
-    for (i = 0; i < N; ++i) {
-        a[i] = rand() % 100;
-    }
-
-    printf("Array:\n");
-    for (i = 0; i < N; ++i) {
-        printf("%d\t", a[i]);
-    }
-    printf("\n");
-
-    for (i = 0; i < N - 1; i += 2) {
-        int temp = a[i];
-        a[i] = a[i + 1];
-        a[i + 1] = temp;
-    }
-
-    printf("Modified array:\n");
-    for (i = 0; i < N; ++i) {
-        printf("%d\t", a[i]);
-    }
     return 0;
+}
+
+void run_test_case(double x, int n)
+{
+    printf("Base: %.3lf, Exponent: %d\n", x, n);
+    printf("Recursive: %.3lf\n", power_recursive(x, n));
+    printf("Iterative: %.3lf\n", power_iterative(x, n));
+    printf("Standard:  %.3lf\n\n", pow(x, n)); // \n\n додає пустий рядок між тестами
 }
