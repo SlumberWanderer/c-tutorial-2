@@ -1,4 +1,4 @@
-﻿project("power")
+﻿project("roots")
 
 include_directories(include)
 
