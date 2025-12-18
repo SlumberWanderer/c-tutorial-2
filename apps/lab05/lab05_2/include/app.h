@@ -1,11 +1,7 @@
-﻿#include "roots.h"
+﻿#pragma once
+
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include <math.h>
-
-#ifndef APP_H
-#define APP_H
-
-double equation(double x);
-double derivative(double x);
-
-#endif

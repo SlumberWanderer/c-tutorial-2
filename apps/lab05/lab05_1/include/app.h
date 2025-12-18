@@ -1,12 +1,7 @@
 ﻿#pragma once
 
-#include "power.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
 #include <math.h>
-
-#ifndef APP_H
-#define APP_H
-
-void run_test_case(double x, int n);
-
-#endif
